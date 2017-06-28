@@ -5,6 +5,11 @@ using System.Xml.Serialization;
 
 namespace Winiarzapp.Core.Data
 {
+ /// <summary>
+ /// Klasa przechowująca listę zapisanych nastawów. Implementuje interfejs IRecipeHistory <br> 
+ /// Podczas tworzenia instancji tego obiektu konstruktor sczytuje zapisany plik XML z historią nastawów zapisując dane do przechowywanej w obiekcie listy.
+ /// 
+ /// </summary
     [Serializable]
     public class FileRecipeHistory : IRecipeHistory
     {
@@ -33,7 +38,11 @@ namespace Winiarzapp.Core.Data
             
             }              
         }
-        
+        /// <summary>
+        /// Konstruktor klasy. 
+        /// Sprawdza czy istnieje plik xml z zapisaną historią nastawów. Jeśli plik istnieje deserializuje go zapisując dane do wewnętrzej listy. 
+        /// W innym przypadku tworzy pustą listę.
+        /// </summary>
       
         public FileRecipeHistory()
         {
